@@ -60,6 +60,46 @@ class _LoginState extends State<Login> {
                     textInputTypee: TextInputType.emailAddress,
                   ),
                   const SizedBox(
+                    height: 10,
+                  ),
+                  InkWell(
+                    onTap: () async {
+                      if (email.text == "") {
+                        AwesomeDialog(
+                          context: context,
+                          dialogType: DialogType.warning,
+                          animType: AnimType.rightSlide,
+                          title: "Error",
+                          desc: "Please enter your E-mail then press forgot Password",
+                        ).show();
+                        return;
+                      } else {
+                        try {
+                          await FirebaseAuth.instance.sendPasswordResetEmail(email: email.text);
+                          AwesomeDialog(
+                            context: context,
+                            dialogType: DialogType.success,
+                            animType: AnimType.rightSlide,
+                            title: "Done",
+                            desc: "An E-mail sent to you E-mail to reset your password",
+                          ).show();
+                        } catch (e) {
+                          AwesomeDialog(
+                            context: context,
+                            dialogType: DialogType.error,
+                            animType: AnimType.rightSlide,
+                            title: "Done",
+                            desc: "Please Ensure that you enterd a valid E-mail then reset your password",
+                          ).show();
+                        }
+                      }
+                    },
+                    child: const Text(
+                      "Forgot Password ?",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                  ),
+                  const SizedBox(
                     height: 33,
                   ),
                   ElevatedButton(
@@ -70,6 +110,7 @@ class _LoginState extends State<Login> {
                             email: email.text,
                             password: password.text,
                           );
+                          Navigator.of(context).pushReplacementNamed("home");
                         } on FirebaseAuthException catch (e) {
                           if (e.code == 'user-not-found') {
                             if (!mounted) return;
