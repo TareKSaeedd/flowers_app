@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1055078616284",
+    "project_id": "flowers-app-ecc84",
+    "storage_bucket": "flowers-app-ecc84.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055078616284:android:eb38a483efccc9f46a3819",
+        "android_client_info": {
+          "package_name": "com.example.flowers_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7jBW1dhrvjjIJp_Ddkv_jM-bsEjrDtGQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
