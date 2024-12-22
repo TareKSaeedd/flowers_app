@@ -14,10 +14,18 @@ A beautiful and user-friendly Flutter application for a flowers shop. This app p
   Browse a wide range of flowers with detailed descriptions and images.
 
 
+## Technologies Used
+
+- **Flutter**: For the frontend and app functionality.  
+- **Dart**: Programming language.  
+- **Firebase**: For authentication.  
+- **Provider**: For state management.
 
 
 
-## Installation 🚀
+
+
+## Installation 
 
 1. Clone the repository:
    ```bash
