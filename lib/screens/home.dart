@@ -72,7 +72,7 @@ class Home extends StatelessWidget {
         backgroundColor: btnappbarGreen,
         title: Consumer<Cart>(
           builder: (context, test, child) {
-            return const Text("Rana's shop");
+            return const Text("FLowers shop");
           },
         ),
         actions: const [
@@ -94,7 +94,7 @@ class Home extends StatelessWidget {
                     backgroundImage: AssetImage("assets/imgs/me.jpg"),
                   ),
                   accountName: Text('Tarek_Saeed'),
-                  accountEmail: Text('Tareksaeed11111@gmail.com'),
+                  accountEmail: Text('Tareksaeed@gmail.com'),
                 ),
                 ListTile(
                   title: const Text('Home'),
